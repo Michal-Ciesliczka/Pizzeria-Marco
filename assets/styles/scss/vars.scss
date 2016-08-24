@@ -1,0 +1,36 @@
+// Vars
+$color-green: #36a26d;
+$color-red: #dd4949;
+$color-grey: #292929;
+
+$z-index-modal: 15;
+$z-index-logo: 12;
+$z-index-header: 10;
+
+// Mixins
+@mixin dimensions($value) {
+    width: $value;
+    height: $value;
+}
+
+@mixin center-h() {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin center-v() {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin center-a() {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}

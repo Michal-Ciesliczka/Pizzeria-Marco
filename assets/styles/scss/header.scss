@@ -1,0 +1,155 @@
+.header {
+    height: 50px;
+
+    @include desktop {
+        height: 80px;
+    }
+
+    .header-mobile {
+        height: 50px;
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    .header-desktop {
+        display: none;
+
+        @include desktop {
+            display: flex;
+            height: 80px;
+        }
+    }
+}
+
+.header.sticky {
+    .logo {
+        @include dimensions(50px);
+
+        top: 10px;
+
+        img {
+            width: 40px;
+            bottom: 8px;
+        }
+    }
+
+    .header-mobile {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        background-color: white;
+
+        .header-mobile--text {
+            display: block;
+        }
+
+        #nav-icon span {
+            background: grey;
+        }
+    }
+}
+
+.header-mobile {
+    padding: 0 10px;
+    z-index: $z-index-header;
+
+    .header-mobile--text {
+        display: none;
+        font-size: 3.5vw;
+    }
+
+    .header-mobile--nav-btn {
+        position: absolute;
+        top: 13px;
+        right: 15px;
+    }
+}
+
+.logo {
+    @include dimensions(150px);
+    @include center-h();
+
+    position: fixed;
+    top: -50px;
+    z-index: $z-index-logo;
+
+    @include desktop {
+        @include dimensions(275px);
+    }
+
+    img {
+        @include center-h();
+
+        width: 95px;
+        bottom: 15px;
+        position: absolute;
+
+        @include desktop {
+            width: 170px;
+            bottom: 30px;
+        }
+    }
+}
+
+// Hamburger icon animation
+#nav-icon {
+  width: 26px;
+  height: 21px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 5px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+
+  &:nth-child(1) {
+      top: 0;
+  }
+
+  &:nth-child(2),
+  &:nth-child(3) {
+      top: 8px;
+  }
+
+  &:nth-child(4) {
+      top: 16px;
+  }
+}
+
+#nav-icon.open {
+    span {
+        &:nth-child(1) {
+            top: 8px;
+            left: 50%;
+            width: 0;
+        }
+
+        &:nth-child(2) {
+              transform: rotate(45deg);
+        }
+
+        &:nth-child(3) {
+              transform: rotate(-45deg);
+        }
+
+        &:nth-child(4) {
+              top: 8px;
+            left: 50%;
+            width: 0;
+        }
+    }
+}

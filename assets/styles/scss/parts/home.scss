@@ -1,0 +1,18 @@
+/*Home*/
+#home {
+    background-image: url('../images/home.png');
+}
+
+.home-info {
+    @include center-a();
+    @include dimensions(70vw);
+
+    max-width: 300px;
+    max-height: 300px;
+    position: absolute;
+
+    .home-info--text {
+        position: relative;
+        top: 40px;
+    }
+}
