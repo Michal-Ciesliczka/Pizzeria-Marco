@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Pizzeria Marco - Najlepsza pizza w Gdańsku"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Pizzeria Marco</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700&subset=latin-ext" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/styles/vendors/flexboxgrid.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="assets/scripts/main.js"></script>
+</head>
+<body>
+	<div class="page">
+		<div id="home" class="page-part row center-xs">
+			<div class="header col-xs-12">
+				<div class="logo romb">
+					 <img src="assets/images/logo.png" alt="Pizzeria Marco" class="img-responsive">
+				</div>
+				<div class="header-desktop">
+					<div class="container">
+						<ul class="main-nav">
+							<li class="main-nav--element"><a href="#restaurant_menu">Menu</a></li>
+							<li class="main-nav--element"><a href="#reservation">Rezerwacja</a></li>
+							<li class="main-nav--element"><a href="#about_us">O nas</a></li>
+							<li class="main-nav--element"><a href="#contact">Kontakt</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header-mobile row middle-xs">
+					<span class="header-mobile--text">Tel. <strong>+48 22 1234 56 78</strong></span>
+					<span class="header-mobile--nav-btn">
+						<div id="nav-icon">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</span>
+				</div>
+			</div>
+			<div class="home-info romb romb-white-80">
+				<div class="home-info--text">
+					<p class="text-size-small text-semi-bold text-italic">Zadzwoń i zamów!</p>
+					<p class="text-size-extra-big text-bold telephone">+48 22 1234 56 78</p>
+					<p class="text-size-small text-semi-bold text-italic">Lub odwiedź nas w lokalu</p>
+					<p class="text-size-extra-big text-bold adress">
+						ul. Żywiecka 5D<br>
+						Gdańsk
+					</p>
+				</div>
+			</div>
+			<!--<div class="call-to-action romb romb-white"></div>-->
+		</div>
+		<div id="restaurant_menu" class="page-part row center-xs">
+			<div class="section-header romb romb-green">
+				<h3 class="text-size-big text-semibold">Menu</h3>
+			</div>
+			<div>
+				<button class="btn btn-red">Kliknij, aby zobaczyć nasze menu</button>
+			</div>
+		</div>
+		<div id="reservation" class="page-part row center-xs">
+			<div class="section-header romb romb-red">
+				<h3 class="text-size-normal text-semibold">Rezerwacja</h3>
+			</div>
+			<div class="reservation-form">
+				<p class="text-size-semibig text-uppercase">Zarezerwuj stolik online!</p>
+				<form>
+					<input type="text" class="form-input" placeholder="Imię">
+					<input type="text" class="form-input" placeholder="Nazwisko">
+					<input type="date" class="form-input form-input--date" placeholder="Data">
+					<input type="datetime" class="form-input form-input--time" placeholder="Godzina">
+					<button type="submit" class="btn btn-green">Rezerwuje!</button>
+				</form>
+			</div>
+		</div>
+		<div id="about_us" class="page-part row center-xs">
+			<div class="section-header romb romb-green">
+				<h3 class="text-size-big text-semibold">O nas</h3>
+			</div>
+			<div class="about_us-text">
+				<h4 class="text-bold text-size-normal">Pizza to nasza pasja</h4>
+				<p class="text-size-normal">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus, nunc sit amet consectetur efficitur, justo ligula commodo sapien, ac porta libero neque eleifend augue.
+				</p>
+				<p class="text-size-normal">
+					Cras sit amet lorem lorem. Suspendisse consectetur nunc velit. Duis facilisis facilisis nunc, vitae posuere massa.
+				</p>
+			</div>
+		</div>
+		<div id="contact" class="page-part row center-xs">
+			<div class="section-header romb romb-red">
+				<h3 class="text-size-semibig text-semibold">Znajdz nas</h3>
+			</div>
+			<div class="contact-map">
+				<a href="#">
+					 <img src="assets/images/map.png" alt="Mapa">
+				</a>
+			</div>
+			<div class="contact-fields">
+				<div class="contact-fields--element">
+					<h4 class="text-size-normal text-uppercase text-red">Telefon</h4>
+					<p class="text-size-normal text-semibold">+48 22 1234 56 78</p>
+				</div>
+				<div class="contact-fields--element">
+					<h4 class="text-size-normal text-uppercase text-green">Godziny otwarcia</h4>
+					<div class="open-hours">
+						<p class="text-size-normal text-italic">Pon - Pt</p>
+						<p class="text-size-normal text-semibold">12:00 - 23:00</p>
+						<p class="text-size-normal text-italic">Sobota</p>
+						<p class="text-size-normal text-semibold">12:00 - 24:00</p>
+						<p class="text-size-normal text-italic">Niedziela</p>
+						<p class="text-size-normal text-semibold">Nieczynne</p>
+					</div>
+				</div>
+				<div class="contact-fields--element">
+					<h4 class="text-size-normal text-uppercase text-red">Lokalizacja</h4>
+					<p class="text-size-normal text-semibold">ul. Żywiecka 5D</p>
+					<p class="text-size-normal">88-88 Gdańsk</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
